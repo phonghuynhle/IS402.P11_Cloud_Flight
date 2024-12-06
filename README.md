@@ -5,14 +5,10 @@
 ### University Information
 - **University**: University of Information Technology, Vietnam National University HCM
 - **Faculty**: Faculty of Software Engineering
-- **Course**: Introduction to Software Engineering
-- **Instructor**: Đỗ Thị Thanh Tuyền
-- **Class**: SE104.O23
 
 ### Team Members
 - **Huỳnh Lê Phong** - 21520086
 - **Nguyễn Quốc Trạng** - 21521556
-- **Trần Nhật Anh** - 21521841
 - **Nguyễn Triệu Vy** - 21522812
 
 ### Project Title
