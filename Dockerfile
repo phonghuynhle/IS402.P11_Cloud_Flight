@@ -12,7 +12,7 @@ COPY .env.sample .env
 
 RUN chown -R root:root /app
 
-EXPOSE 3030 4040 3001 3002 3003
+EXPOSE 4040
 
 CMD ["npm", "start"]
 
