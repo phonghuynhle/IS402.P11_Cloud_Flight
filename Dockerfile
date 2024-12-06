@@ -17,7 +17,7 @@ COPY . .
 COPY .env.sample .env
 
 # Mở cổng cho ứng dụng
-EXPOSE 4040 3030
+EXPOSE 4040 3030 3032 3033
 
 RUN npm install -g concurrently
 
