@@ -50,11 +50,11 @@ spec:
       targetPort: 3001
     - name: http-admin
       protocol: TCP
-      port: 81
+      port: 83
       targetPort: 3002
     - name: http-administrator
       protocol: TCP
-      port: 81
+      port: 84
       targetPort: 3003
   type: LoadBalancer
 
