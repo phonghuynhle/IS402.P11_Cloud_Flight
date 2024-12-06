@@ -1,92 +1,42 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-development
+  name: expressjs-backend-development
 spec:
   replicas: 1
   revisionHistoryLimit: 0
   selector:
     matchLabels:
-      app: react-frontend
+      app: expressjs-backend
       env: dev
   template:
     metadata:
       labels:
-        app: react-frontend
+        app: expressjs-backend
         env: dev
     spec:
       containers:
-      - name: react-frontend
-        image: btlcr001.azurecr.io/reactfrontend
+      - name: expressjs-backend
         imagePullPolicy: Always
-        ports:
-        - containerPort: 3000
-        env:
-        - name: NODE_ENV
-          value: development
-        command: ["npm", "run", "dev:user"]
-        volumeMounts:
-        - name: frontend-code
-          mountPath: /usr/src/app
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: frontend-development
-spec:
-  selector:
-    app: react-frontend
-    env: dev
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 3000
-  type: LoadBalancer
-
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: backend-development
-spec:
-  replicas: 1
-  revisionHistoryLimit: 0
-  selector:
-    matchLabels:
-      app: node-backend
-      env: dev
-  template:
-    metadata:
-      labels:
-        app: node-backend
-        env: dev
-    spec:
-      containers:
-      - name: node-backend
-        image: btlcr001.azurecr.io/nodebackend
-        imagePullPolicy: Always
+        image: btlcr001.azurecr.io/nestjsbackend
         ports:
         - containerPort: 5000
-        env:
-        - name: NODE_ENV
-          value: development
-        command: ["npm", "start"]
-        volumeMounts:
-        - name: backend-code
-          mountPath: /usr/src/app
+        - containerPort: 3000
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: backend-development
+  name: expressjs-backend-development
 spec:
   selector:
-    app: node-backend
+    app: expressjs-backend
     env: dev
   ports:
     - protocol: TCP
       port: 80
       targetPort: 5000
-  type: LoadBalancer
+    - protocol: TCP
+      port: 81
+      targetPort: 3000
+  type: LoadBalancer 
