@@ -9,6 +9,7 @@ services:
     container_name: expressjs-backend-container
     ports:
       - "4040:4040"
+      - "3030:3030"
       - "8000:8000"
       - "1935:1935"
     volumes:
