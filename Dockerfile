@@ -10,7 +10,7 @@ COPY . .
 
 COPY .env.sample .env
 
-EXPOSE 3030 4040
+EXPOSE 3030
 
 RUN npm install -g concurrently
 
