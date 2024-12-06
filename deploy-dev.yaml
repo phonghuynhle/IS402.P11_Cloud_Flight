@@ -32,9 +32,8 @@ spec:
     app: expressjs-backend
     env: dev
   ports:
-    - name: http-alts
-      protocol: TCP
-      port: 81
+    - protocol: TCP
+      port: 80
       targetPort: 4040
   type: LoadBalancer
 
