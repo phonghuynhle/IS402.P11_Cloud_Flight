@@ -8,12 +8,8 @@ services:
     image: expressjsbackend:latest
     container_name: expressjs-backend-container
     ports:
-      - "3030:3030"
       - "4040:4040"
       - "8000:8000"
-      - "3001:3001"
-      - "3002:3002"
-      - "3003:3003"
       - "1935:1935"
     volumes:
       - ./data:/app/data
