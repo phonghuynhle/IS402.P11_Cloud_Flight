@@ -19,5 +19,6 @@ COPY .env.sample .env
 # Mở cổng cho ứng dụng
 EXPOSE 4040 3030
 
-# Chạy ứng dụng
-CMD ["npm", "start"]
+RUN npm install -g concurrently
+
+CMD ["npm", "run", "start:all"]
