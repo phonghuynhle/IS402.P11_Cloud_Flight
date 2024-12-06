@@ -12,5 +12,5 @@ COPY .env.sample .env
 
 EXPOSE 3030 4040 3001 3002 3003
 
-CMD ["npm", "run", "dev"]
+CMD ["npm", "start"]
 
