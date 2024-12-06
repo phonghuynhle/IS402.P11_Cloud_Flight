@@ -1,36 +1,41 @@
-version: '3.8'
-
+version: '3'
 services:
-  frontend:
+
+  frontend-app:
     build:
       context: .
       dockerfile: Dockerfile
+    image: reactfrontend:latest
+    container_name: react-frontend-container
     ports:
       - "3000:3000"
     environment:
       - NODE_ENV=development
     working_dir: /usr/src/app
-    command: npm run dev:user 
+    command: npm run dev:user
     volumes:
       - .:/usr/src/app
     depends_on:
-      - backend
+      - backend-app
 
-  backend:
+  backend-app:
     build:
       context: .
       dockerfile: Dockerfile
+    image: nodebackend:latest
+    container_name: node-backend-container
     ports:
       - "5000:5000"
     environment:
       - NODE_ENV=development
     working_dir: /usr/src/app
-    command: npm run server 
+    command: npm run server
     volumes:
       - .:/usr/src/app
-      
-  db:
+
+  mongo-db:
     image: mongo:latest
+    container_name: mongo-db-container
     ports:
       - "27017:27017"
     volumes:
