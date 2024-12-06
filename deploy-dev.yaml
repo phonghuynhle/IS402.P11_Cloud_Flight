@@ -18,7 +18,7 @@ spec:
       containers:
       - name: expressjs-backend
         imagePullPolicy: Always
-        image: btlcr001.azurecr.io/nestjsbackend
+        image: btlcr001.azurecr.io/expressjsbackend
         ports:
         - containerPort: 5000
         - containerPort: 3000
