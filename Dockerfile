@@ -12,6 +12,8 @@ COPY .env.sample .env
 
 EXPOSE 3030 4040 3001 3002 3003
 
-RUN npm install -g concurrently
+# RUN npm install -g concurrently
 
-CMD ["npm", "run", "start:all"]
+# CMD ["npm", "run", "start:all"]
+
+CMD ["npm", "start"]
