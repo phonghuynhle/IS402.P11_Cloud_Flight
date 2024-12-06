@@ -1,45 +1,15 @@
 version: '3'
 services:
 
-  frontend-app:
+  expressjs-app:
     build:
       context: .
       dockerfile: Dockerfile
-    image: reactfrontend:latest
-    container_name: react-frontend-container
-    ports:
-      - "3000:3000"
-    environment:
-      - NODE_ENV=development
-    working_dir: /usr/src/app
-    command: npm run dev:user
-    volumes:
-      - .:/usr/src/app
-    depends_on:
-      - backend-app
-
-  backend-app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: nodebackend:latest
-    container_name: node-backend-container
+    image: expressjsbackend:latest
+    container_name: expressjs-backend-container
     ports:
       - "5000:5000"
-    environment:
-      - NODE_ENV=development
-    working_dir: /usr/src/app
-    command: npm run server
+      - "3000:3000"
+      - "1935:1935"
     volumes:
-      - .:/usr/src/app
-
-  mongo-db:
-    image: mongo:latest
-    container_name: mongo-db-container
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongo_data:/data/db
-
-volumes:
-  mongo_data:
+      - ./data:/app/data
