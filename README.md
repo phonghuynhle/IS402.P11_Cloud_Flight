@@ -4,7 +4,7 @@
 
 ### University Information
 - **University**: University of Information Technology, Vietnam National University HCM
-- **Faculty**: Faculty of Software Engineering
+- **Faculty**: Faculty of Infomation System
 
 ### Team Members
 - **Huỳnh Lê Phong** - 21520086
