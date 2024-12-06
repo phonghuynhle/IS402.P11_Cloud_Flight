@@ -28,10 +28,6 @@ spec:
         volumeMounts:
         - name: frontend-code
           mountPath: /usr/src/app
-      volumes:
-      - name: frontend-code
-        hostPath:
-          path: /path/to/frontend/code
 
 ---
 apiVersion: v1
@@ -79,10 +75,6 @@ spec:
         volumeMounts:
         - name: backend-code
           mountPath: /usr/src/app
-      volumes:
-      - name: backend-code
-        hostPath:
-          path: /path/to/backend/code
 
 ---
 apiVersion: v1
