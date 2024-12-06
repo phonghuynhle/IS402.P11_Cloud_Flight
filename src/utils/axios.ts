@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-    baseURL: "http://localhost:4040/api"
+    baseURL: "http://localhost:3030/api"
 });
 
 // custom response
