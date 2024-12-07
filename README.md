@@ -110,5 +110,6 @@ Our project, "Flight Ticket Management System," aims to address these challenges
 ## Team Work Distribution
 - **Huỳnh Lê Phong**: Requirement analysis, backend development.
 - **Nguyễn Quốc Trạng**: System design, backend development and database schema.
+- **Nguyễn Việt Hoàng**: User interface design and frontend development.
 - **Nguyễn Triệu Vy**: User interface design, frontend development and documentation.
 
