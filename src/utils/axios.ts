@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-    baseURL: "http://4.209.166.39:81/api"
+    baseURL: "http://172.205.106.116:81/api"
 });
 
 // custom response
