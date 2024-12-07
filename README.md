@@ -9,6 +9,7 @@
 ### Team Members
 - **Huỳnh Lê Phong** - 21520086
 - **Nguyễn Quốc Trạng** - 21521556
+- **Nguyễn Việt Hoàng** - 21522095
 - **Nguyễn Triệu Vy** - 21522812
 
 ### Project Title
